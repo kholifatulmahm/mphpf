@@ -5,9 +5,11 @@ require_once 'm/m.php';
 
 // Add your controllers here.
 require_once 'controller/HomeController.php';
+require_once 'controller/DosenController.php';
 
 // Here is the place for your model scripts.
 require_once 'model/StudentModel.php';
+require_once 'model/DosenModel.php';
 
 use m\Settings;
 use m\Application;
@@ -33,7 +35,9 @@ $settings->setDbConnection(array(
 $settings->setRoute(array(
     array('/', 'Home', 'index'),
     array('/index.php', 'Home', 'index'),
-    array('/add-new-student', 'Home', 'addStudent')
+    array('/add-new-student', 'Home', 'addStudent'),
+    array('/dosen', 'Dosen', 'index'),
+    array('/add-new-dosen', 'Dosen', 'addDosen')
     // Add your other routs here...
 
     // Below are some examples of other valid routing
